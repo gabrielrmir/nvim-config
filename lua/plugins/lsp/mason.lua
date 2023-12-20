@@ -21,5 +21,21 @@ return {
             ensure_installed = {"lua_ls"},
             automatic_installation = true,
         })
+        require("mason-lspconfig").setup_handlers {
+            function (server_name)
+                lspconfig[server_name].setup {}
+            end,
+            ["lua_ls"] = function()
+                require("lspconfig").lua_ls.setup {
+                settings = {
+                    Lua = {
+                        completion = {
+                            callSnippet = "Replace"
+                        }
+                    }
+                }
+            }
+            end,
+        }
     end,
 }

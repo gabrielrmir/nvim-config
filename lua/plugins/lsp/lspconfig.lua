@@ -7,20 +7,6 @@ return {
     config = function()
         require("neodev").setup {}
 
-        local lspconfig = require('lspconfig')
-        lspconfig.lua_ls.setup {
-            settings = {
-                Lua = {
-                    completion = {
-                        callSnippet = "Replace"
-                    }
-                }
-            }
-        }
-        lspconfig.tsserver.setup {}
-        lspconfig.clangd.setup {}
-
-        -- Global mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
         vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
         vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
