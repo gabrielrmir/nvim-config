@@ -11,6 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
+					"rust_analyzer",
 				},
 				automatic_installation = true,
 			})
@@ -67,6 +68,18 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
+			})
+
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				settings = {
+					["rust-analyzer"] = {
+						diagnostics = {
+							enable = false,
+						},
+					},
+				},
 			})
 		end,
 	},

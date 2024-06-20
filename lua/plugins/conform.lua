@@ -11,6 +11,7 @@ return {
 				typescript = { { "prettierd", "prettier" } },
 				javascriptreact = { { "prettierd", "prettier" } },
 				typescriptreact = { { "prettierd", "prettier" } },
+				rust = { "rustfmt" },
 			},
 			format_on_save = {
 				timeout_ms = 500,
