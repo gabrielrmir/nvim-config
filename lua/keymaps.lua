@@ -11,6 +11,9 @@ vim.opt.softtabstop = 2
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
