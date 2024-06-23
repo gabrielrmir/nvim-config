@@ -11,6 +11,7 @@ return {
 		wk.register({
 			f = { name = "+Find" },
 			b = { name = "+Buffer" },
+			x = { name = "+Trouble" },
 		}, { prefix = "<leader>" })
 	end,
 }
