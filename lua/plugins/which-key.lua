@@ -10,6 +10,7 @@ return {
 		local wk = require("which-key")
 		wk.register({
 			f = { name = "+Find" },
+			b = { name = "+Buffer" },
 		}, { prefix = "<leader>" })
 	end,
 }
