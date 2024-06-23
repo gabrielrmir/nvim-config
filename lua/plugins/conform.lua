@@ -22,7 +22,7 @@ return {
 		})
 
 		vim.api.nvim_create_user_command("FormatToggle", function(args)
-			if args.buffer then
+			if args.bang then
 				vim.b.disable_autoformat = not vim.b.disable_autoformat
 				if vim.b.disable_autoformat then
 					print("autoformat-on-save disabled for this buffer")
