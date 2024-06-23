@@ -25,16 +25,16 @@ return {
 			if args.bang then
 				vim.b.disable_autoformat = not vim.b.disable_autoformat
 				if vim.b.disable_autoformat then
-					print("autoformat-on-save disabled for this buffer")
+					vim.notify("autoformat-on-save disabled for this buffer")
 				else
-					print("autoformat-on-save enabled for this buffer")
+					vim.notify("autoformat-on-save enabled for this buffer")
 				end
 			else
 				vim.g.disable_autoformat = not vim.g.disable_autoformat
 				if vim.g.disable_autoformat then
-					print("autoformat-on-save disabled globally")
+					vim.notify("autoformat-on-save disabled globally")
 				else
-					print("autoformat-on-save enabled globally")
+					vim.notify("autoformat-on-save enabled globally")
 				end
 			end
 		end, {
