@@ -12,6 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"rust_analyzer",
+					"clangd",
 				},
 				automatic_installation = true,
 			})
@@ -83,6 +84,11 @@ return {
 			})
 
 			lspconfig.marksman.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+
+			lspconfig.clangd.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
